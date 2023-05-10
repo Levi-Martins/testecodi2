@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik&display=swap');
+
+:root{
+    --font-display:'Playfair Display', serif;
+    --font-padrao:'Rubik', sans-serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    padding: 140px 180px 140px 180px;
+
+    position: relative;
+}
+
+#container > h1{
+    font-family: var(--font-display);
+    font-size: 64px;
+    color: #172432;
+}
+
+#container > hr{
+    width: 356px;
+    background-color: #FF7757;
+    height: 3px;
+    border: 0;
+    opacity: 1;
+}
+
+#container > p{
+    font-family: var(--font-padrao);
+    font-size: 24px;
+    color: #767E86;
+}
+
+#arrow-left{
+    position: absolute;
+    top: 222px;
+    right: 180px;
+    width: 50px;
+    height: 56px;
+    background-color: #172432;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+
+#arrow-right{
+    position: absolute;
+    top: 222px;
+    right: 140px;
+    width: 50px;
+    height: 56px;
+    background-color: #FF7757;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.gallery-wrapper{
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.card-img{
+    position: relative;
+}
+
+.content-img{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: white;
+}
+
+.location{
+    font-size: 24px;
+    font-family: var(--font-padrao);
+}
+
+.content-img img{
+    height: 24px;
+    width: 24px;
+    margin-right: 15px;
+}
+
+img{
+    height: 661px;
+    width: 497px;
+    border-radius: 26px;
+}
+
+.item{
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.6;
+}
+
+.current-item{
+    opacity: 1;
+}
+
+@media (max-width:1440px){
+    #container{
+        padding: 100px 32px 100px 32px;
+    }
+
+    #arrow-left{
+        top: 185px;
+        right: 90px;
+    }
+    
+    
+    #arrow-right{
+        top: 185px;
+        right: 50px;
+    }
+}
+@media (max-width:1200px){
+    #container > p{
+        max-width: 750px;
+    }
+}
+
+@media (max-width:985px){
+
+    #container{
+        padding: 100px 20px 100px 20px;
+    }
+    #arrow-left{
+        top: 95%;
+        right: 45%;
+    }
+
+    #arrow-right{
+        top: 95%;
+        right: 40%;
+    }
+
+    .item{
+        height: 456px;
+        width: 100%;
+    }
+
+    .card-img{
+        display: none;
+    }
+
+    .card-img.current-item{
+        display: block;
+    }
+}
+
+@media (max-width:769px){
+    #container > h1{
+        font-size: 54px;
+    }
+
+    #container > p{
+        font-size: 20px;
+    }
+
+    .item{
+        width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    #container > h1{
+        font-size: 40px;
+    }
+
+    #container > hr{
+        width: 227px;
+    }
+
+    #container > p{
+        font-size: 18px;
+    }
+
+    #arrow-left{
+        top: 95%;
+        right: 45%;
+    }
+
+    #arrow-right{
+        top: 95%;
+        right: 35%;
+    }
+
+    .item{
+        height: 320px;
+    }
+
+    .content-img{
+        font-size: 24px;
+    }
+
+    .location{
+        font-size: 18px;
+    }
+}
+    
